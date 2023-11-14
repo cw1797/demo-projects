@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: service-123
+  namespace: devteam123
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - devteam123-service.com
+    secretName: tls-secret-123
+  rules:
+  - host: devteam123-service.com
+    http:
+      paths:
+      - path: /service-1
+        pathType: Prefix
+        backend:
+          service:
+            name: service-1
+            port:
+              number: 80
+      - path: /service-2
+        pathType: Prefix
+        backend:
+          service:
+            name: service-2
+            port:
+              number: 80
+      - path: /service-3
+        pathType: Prefix
+        backend:
+          service:
+            name: service-3
+            port:
+              number: 80

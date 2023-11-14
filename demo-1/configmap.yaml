@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service-1-html
+  namespace: devteam123
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Service-1</title>
+    </head>
+    <body>
+        <h1>Up and running!</h1>
+    </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service-2-html
+  namespace: devteam123
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Service-2</title>
+    </head>
+    <body>
+        <h1>Up and running!</h1>
+    </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service-3-html
+  namespace: devteam123
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Service-3</title>
+    </head>
+    <body>
+        <h1>Up and running!</h1>
+    </body>
+    </html>
